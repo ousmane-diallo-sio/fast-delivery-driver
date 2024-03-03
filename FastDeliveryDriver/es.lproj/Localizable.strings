@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  FastDeliveryDriver
+
+  Created by Ousmane Diallo on 02/03/2024.
+  
+*/
+
+"home.main_button" = "Iniciar sesión";
+"home.email" = "Correo electrónico";
+"home.password" = "Contraseña";
+"error_message" = "Se ha producido un error";
+"error_login" = "Correo electrónico o contraseña incorrectos";
+"logout" = "Cerrar sesión";
+"err_no_rounds" = "No hay recorridos disponibles actualmente";
+"round_search_msg" = "Buscar recorridos actuales...";
+"select_round_label" = "Elija un recorrido";
+"deliveries" = "Entregas";
+"customer_name_label" = "Nombre del cliente";
+"customer_email_label" = "Correo electrónico";
+"customer_phone_number_label" = "Número de teléfono";
+"too_far_from_delivery_location" = "Estás demasiado lejos del lugar de entrega";

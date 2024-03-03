@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  FastDeliveryDriver
+
+  Created by Ousmane Diallo on 02/03/2024.
+  
+*/
+
+"home.main_button" = "Log in";
+"home.email" = "Email";
+"home.password" = "Password";
+"error_message" = "An error has occurred";
+"error_login" = "Wrong email or password";
+"logout" = "Logout";
+"err_no_rounds" = "No rounds currently available";
+"round_search_msg" = "Looking for rounds...";
+"select_round_label" = "Select a round";
+"deliveries" = "deliveries";
+"cancel" = "Cancelar";
+"customer_name_label" = "Customer name";
+"customer_email_label" = "Email";
+"customer_phone_number_label" = "Phone number";
+"too_far_from_delivery_location" = "You are too far from the destination";
