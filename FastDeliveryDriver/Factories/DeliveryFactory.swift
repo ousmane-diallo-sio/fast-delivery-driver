@@ -18,9 +18,11 @@ class DeliveryFactory {
         }
         
         let photoData = data["photo"] as? [String: Any]
+        print("photoData == nil \(photoData == nil)")
         let photo = photoData != nil ? PhotoFactory.photoFromJSON(from: photoData!) : nil
         
         print("DeliveryFactory::deliveryFromJSON customer : ", customer)
+        print("DeliveryFactory::deliveryFromJSON photo : ", photo)
         
         return Delivery(_id: id, photo: photo, customer: customer)
     }

@@ -36,7 +36,7 @@ class DeliveryViewController: UIViewController {
         deliveryInfo += "\(customerPhoneNumberLabel) : \(delivery.customer.phoneNumber)\n"
 
         lblDeliveryInfo.text = deliveryInfo
-        
+                
         if let _photo = delivery.photo?.photo {
             let imageData = Data(base64Encoded: _photo.data)!
             iv.image = UIImage(data: imageData)
@@ -94,22 +94,28 @@ extension DeliveryViewController: UIImagePickerControllerDelegate, UINavigationC
             return
         }
         self.iv.image = image
-        delivery.photo = Photo(
-            date: Date(),
-            photo: PhotoData(data: imageData, contentType: "image/jpeg"),
-            trackingId: "\(arc4random_uniform(UInt32.max))"
-        )
         
-        DeliveryWebService.updateDelivery(withID: delivery._id, photoData: imageData, completion: { error in
-            if (error != nil) {
+        let photoData = PhotoData(data: imageData, contentType: "image/jpeg")
+        let trackingId = "\(arc4random_uniform(UInt32.max))"
+        
+        PhotoWebService.uploadPhoto(trackingId: trackingId, date: Date(), photo: photoData.data, completion: { photo, err in
+            if (err != nil || photo == nil) {
                 DispatchQueue.main.async {
-                    print("DeliveryWebService::updateDelivery : \(error)")
+                    print("DeliveryWebService::updateDelivery : \(err)")
                 }
             }
-            DispatchQueue.main.async {
-                picker.dismiss(animated: true)
-                // self.navigationController?.popViewController(animated: true)
-            }
+            
+            DeliveryWebService.updateDelivery(withID: self.delivery._id, photoId: photo?._id ?? "", completion: { error in
+                if (error != nil) {
+                    DispatchQueue.main.async {
+                        print("DeliveryWebService::updateDelivery : \(error)")
+                    }
+                }
+                DispatchQueue.main.async {
+                    picker.dismiss(animated: true)
+                    // self.navigationController?.popViewController(animated: true)
+                }
+            })
         })
     }
     

@@ -34,6 +34,7 @@
 		CDD83FCD2B94EAFB004F8EA2 /* CustomerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FCC2B94EAFB004F8EA2 /* CustomerFactory.swift */; };
 		CDD83FCF2B94EB0D004F8EA2 /* AddressFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FCE2B94EB0D004F8EA2 /* AddressFactory.swift */; };
 		CDD83FD12B951336004F8EA2 /* DeliveryWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FD02B951336004F8EA2 /* DeliveryWebservice.swift */; };
+		CDD83FD32B952451004F8EA2 /* PhotoWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FD22B952451004F8EA2 /* PhotoWebservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		CDD83FCC2B94EAFB004F8EA2 /* CustomerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFactory.swift; sourceTree = "<group>"; };
 		CDD83FCE2B94EB0D004F8EA2 /* AddressFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFactory.swift; sourceTree = "<group>"; };
 		CDD83FD02B951336004F8EA2 /* DeliveryWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryWebservice.swift; sourceTree = "<group>"; };
+		CDD83FD22B952451004F8EA2 /* PhotoWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWebservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				CDD83FB22B93781D004F8EA2 /* DriverWebservice.swift */,
 				CDD83FC02B93AF08004F8EA2 /* RoundWebservice.swift */,
 				CDD83FD02B951336004F8EA2 /* DeliveryWebservice.swift */,
+				CDD83FD22B952451004F8EA2 /* PhotoWebservice.swift */,
 			);
 			path = Webservices;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				CD053AD62B73DBFE00237D5E /* LoginViewController.swift in Sources */,
 				CD053ABD2B73DB3D00237D5E /* AppDelegate.swift in Sources */,
 				CDD83FCD2B94EAFB004F8EA2 /* CustomerFactory.swift in Sources */,
+				CDD83FD32B952451004F8EA2 /* PhotoWebservice.swift in Sources */,
 				CDD83FA42B9375A3004F8EA2 /* Address.swift in Sources */,
 				CDD83FA82B937610004F8EA2 /* Round.swift in Sources */,
 				CDD83FC62B93B818004F8EA2 /* DeliveryViewController.swift in Sources */,

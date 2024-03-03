@@ -9,7 +9,7 @@ import Foundation
 
 class DeliveryWebService {
     
-    class func updateDelivery(withID id: String, photoData: String, completion: @escaping (Error?) -> Void) {
+    class func updateDelivery(withID id: String, photoId: String, completion: @escaping (Error?) -> Void) {
         let url = URL(string: "http://localhost:3000/delivery/\(id)")!
         
         print("url", url)
@@ -18,7 +18,7 @@ class DeliveryWebService {
         request.httpMethod = "PUT"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let payload: [String: Any] = ["photo": photoData]
+        let payload: [String: Any] = ["photo": photoId]
         
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: payload)

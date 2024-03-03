@@ -28,9 +28,7 @@ class RoundWebService {
                 completion([], NSError(domain: "com.example.driver", code: 1))
                 return
             }
-                       
-            print("RoundWebservice::getAllRounds json : \(jsonUnwrapped)")
-            
+                                   
             var rounds = RoundFactory.roundsFromJSON(from: jsonUnwrapped)
                         
             print("RoundWebservice::getAllRounds rounds count : \(rounds.count)")
