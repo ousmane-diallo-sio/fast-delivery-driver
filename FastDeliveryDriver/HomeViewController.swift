@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func getDelieryRound() {
-        RoundWebService.getAllRounds(completion: { rounds, err in
+        RoundWebService.getAllRounds(driverEmail: driver.email, completion: { rounds, err in
             if (err != nil) {
                 print("Home::getDeliveryRound error : \(err)")
                 DispatchQueue.main.async {
@@ -55,9 +55,11 @@ class HomeViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.rounds = rounds
-                self.presentAvailableRounds()
+                
                 if (rounds.isEmpty) {
                     showToast(view: self.view, message: NSLocalizedString("err_no_rounds", comment: ""))
+                } else {
+                    self.presentAvailableRounds()
                 }
                 
             }

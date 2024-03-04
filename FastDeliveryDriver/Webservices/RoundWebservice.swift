@@ -9,7 +9,7 @@ import Foundation
 
 class RoundWebService {
     
-    class func getAllRounds(completion: @escaping ([Round], Error?) -> Void) {
+    class func getAllRounds(driverEmail: String, completion: @escaping ([Round], Error?) -> Void) {
         let url = URL(string: "http://localhost:3000/round/")!
         
         var request = URLRequest(url: url)
@@ -40,7 +40,7 @@ class RoundWebService {
             }
 
             rounds = rounds.filter { round in
-                round.deliveries.isEmpty == false
+                round.deliveries.isEmpty == false && round.driver.email == driverEmail
             }
             completion(rounds, nil)
         }

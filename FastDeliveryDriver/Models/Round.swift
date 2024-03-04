@@ -10,9 +10,11 @@ import Foundation
 class Round {
     var date: Date
     var deliveries: [Delivery]
+    var driver: Driver
     
-    init(date: Date, deliveries: [Delivery]) {
+    init(date: Date, deliveries: [Delivery], driver: Driver) {
         self.date = date
         self.deliveries = deliveries
+        self.driver = driver
     }
 }
